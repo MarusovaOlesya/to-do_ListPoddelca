@@ -19,9 +19,47 @@ namespace to_do_ListPoddelca
     /// </summary>
     public partial class NewPartition : Window
     {
-        public NewPartition()
+        Razdel razdel;
+        public NewPartition(Razdel razdel)
         {
             InitializeComponent();
+            this.razdel = razdel;
+        }
+
+        private void RadioButton_ImageFailed(object sender, ExceptionRoutedEventArgs e)
+        {
+
+        }
+
+        private void Click_Dobavit(object sender, RoutedEventArgs e)
+        {
+            razdel.IdText = TextBox.Text;
+            this.Close();
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            razdel.IdIcon = "1";
+        }
+
+        private void RadioButton_Checked1(object sender, RoutedEventArgs e)
+        {
+            razdel.IdIcon = "2";
+        }
+
+        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        {
+            razdel.IdIcon = "3";
+        }
+
+        private void RadioButton_Checked_2(object sender, RoutedEventArgs e)
+        {
+            razdel.IdIcon= "4";
+        }
+
+        private void RadioButton_Checked_3(object sender, RoutedEventArgs e)
+        {
+            razdel.IdIcon = "5";
         }
     }
 }

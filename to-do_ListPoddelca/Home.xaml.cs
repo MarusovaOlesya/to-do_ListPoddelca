@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,15 +20,17 @@ namespace to_do_ListPoddelca
     /// </summary>
     public partial class Home : Window
     {
-        public Home()
+        private SqlConnection bd;
+        private string Id;
+        public Home(SqlConnection bd, string Id)
         {
             InitializeComponent();
-            ListBox.Items.Add(Create());
-            ListBox.Items.Add(Create());
-            ListBox.Items.Add(Create());
+            //ListBox.Items.Add(Create());
+            //ListBox.Items.Add(Create());
+            SqlCommand cmd = new SqlCommand("select NicName from Users where id ="+Id,bd);
 
         }
-        public Grid Create()
+        public Grid Create(string IdIcons, string IdText)
         {
             Grid myGrid = new Grid
             {
@@ -46,13 +49,13 @@ namespace to_do_ListPoddelca
 
             Image myImage = new Image
             {
-                Source = new BitmapImage(new Uri("/image/icons/icons8-главная-страница-96.png", UriKind.Relative))
+                Source = new BitmapImage(new Uri("/image/icons/"+ IdIcons+".png", UriKind.Relative))
             };
             Grid.SetColumn(myImage, 0);
 
             TextBlock myTextBlock = new TextBlock
             {
-                Text = "мой день",
+                Text = IdText,
                 VerticalAlignment = VerticalAlignment.Center,
                 TextAlignment = TextAlignment.Center
             };
@@ -65,9 +68,10 @@ namespace to_do_ListPoddelca
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NewPartition newPartition = new NewPartition();
-            newPartition.Show();
-            this.Close();
+            Razdel razdel = new Razdel();
+            NewPartition newPartition = new NewPartition(razdel);
+            newPartition.ShowDialog();
+            ListBox.Items.Add(Create(razdel.IdIcon, razdel.IdText));
         }
     }
 }

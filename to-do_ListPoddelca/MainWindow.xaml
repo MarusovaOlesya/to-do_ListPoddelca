@@ -9,9 +9,10 @@
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Text="Login" />
-            <TextBox Width="150"/>
+            <TextBox Width="150" Name="Login"/>
             <TextBlock Text="Password"/>
-            <PasswordBox/>
+            <TextBox Name="Password"/>
+            <TextBlock Text="" Name="Text"/>
             <Button Content="Sign in" Click="Button_Click"/>
             <Button Content="Sign up"/>
         </StackPanel>

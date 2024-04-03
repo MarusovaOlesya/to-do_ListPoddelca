@@ -61,6 +61,7 @@
     <Compile Include="NewPartition.xaml.cs">
       <DependentUpon>NewPartition.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Razdel.cs" />
     <Compile Include="SignUp.xaml.cs">
       <DependentUpon>SignUp.xaml</DependentUpon>
     </Compile>

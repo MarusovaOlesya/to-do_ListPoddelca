@@ -11,38 +11,43 @@
                 <StackPanel Orientation="Horizontal">
                 <Grid>
                     <StackPanel Orientation="Horizontal">
-                        <RadioButton/>
-                        <Image Source="/Image/Icons/1.png" Height="77" Width="69" />
+                        <RadioButton GroupName="Icons" Checked="RadioButton_Checked">
+                            <Image Source="/Image/Icons/1.png" Height="77" Width="69" />
+                        </RadioButton>
                     </StackPanel>
                 </Grid>
                 <Grid>
                     <StackPanel Orientation="Horizontal">
-                        <RadioButton/>
-                        <Image Source="/Image/Icons/2.png" Height="87" Width="59" />
+                        <RadioButton GroupName="Icons" Checked="RadioButton_Checked1">
+                            <Image Source="/Image/Icons/2.png" Height="87" Width="59" />
+                        </RadioButton>
                     </StackPanel>
                 </Grid>
                 <Grid>
                     <StackPanel Orientation="Horizontal">
-                        <RadioButton/>
-                        <Image Source="/Image/Icons/3.png" Height="92" Width="62" />
+                        <RadioButton GroupName="Icons" Checked="RadioButton_Checked_1">
+                            <Image Source="/Image/Icons/3.png" Height="92" Width="62" />
+                        </RadioButton>
                     </StackPanel>
                 </Grid>
                 <Grid>
                     <StackPanel Orientation="Horizontal">
-                        <RadioButton/>
-                        <Image Source="/Image/Icons/4.png" Height="93" Width="68" />
+                        <RadioButton GroupName="Icons" Checked="RadioButton_Checked_2">
+                            <Image Source="/Image/Icons/4.png" Height="93" Width="68" />
+                        </RadioButton>
                     </StackPanel>
                 </Grid>
                 <Grid>
                     <StackPanel Orientation="Horizontal">
-                        <RadioButton/>
-                        <Image Source="/Image/Icons/5.png" Height="92" Width="69" />
+                        <RadioButton GroupName="Icons" Checked="RadioButton_Checked_3">
+                            <Image Source="/Image/Icons/5.png" Height="92" Width="69" />
+                        </RadioButton>
                     </StackPanel>
                 </Grid>
             </StackPanel>
             <TextBlock Text="Напишить задачу"/>
-            <TextBox/>
-            <Button Content="Добавить"/>
+            <TextBox Name="TextBox"/>
+            <Button Content="Добавить" Click="Click_Dobavit"/>
         </StackPanel>
     </Grid>
 </Window>
