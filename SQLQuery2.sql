@@ -1,0 +1,1 @@
+﻿select Description from Cases where Partition_id =(select id from Partition where Name='Мой день');

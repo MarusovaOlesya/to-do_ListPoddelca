@@ -21,10 +21,10 @@
                     <ColumnDefinition/>
                     <ColumnDefinition Width="2.5*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Text="NickName" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBlock Text="NickName" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Name="Nick"/>
             </Grid>
             <ScrollViewer Grid.Row="1">
-                <ListBox Background="White" Name="ListBox">
+                <ListBox Background="White" Name="ListBox" SelectionChanged="ListBox_SelectionChanged">
                     <Grid Height="36" Width="149">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
@@ -46,26 +46,8 @@
                 <Image Source="/Image/Fons/1.jpg" Stretch="Fill" />
             </Grid>
             <Grid Grid.Row="1">
-                <StackPanel>
-                    <Grid>
-                        <StackPanel Orientation="Horizontal">
-                            <CheckBox/>
-                            <TextBlock Text="Дело 1"/>
-                        </StackPanel>
-                    </Grid>
-                    <Grid>
-                        <StackPanel Orientation="Horizontal">
-                            <CheckBox/>
-                            <TextBlock Text="Дело 2"/>
-                        </StackPanel>
-                    </Grid>
-                    <Grid>
-                        <StackPanel Orientation="Horizontal">
-                            <CheckBox/>
-                            <TextBlock Text="Дело 3"/>
-                        </StackPanel>
-                    </Grid>
-                </StackPanel>
+                <StackPanel Name="StackP"/>
+
             </Grid>
         </Grid>
     </Grid>
