@@ -1,1 +1,1 @@
-﻿select Description from Cases where Partition_id =(select id from Partition where Name='Мой день');
+﻿insert into Cases values(1,'sads',0);
