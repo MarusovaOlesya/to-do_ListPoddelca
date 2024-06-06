@@ -48,7 +48,7 @@ namespace to_do_ListPoddelca
                 this.Close();
             }
             else
-            {
+           
                 Text.Text = "ERROR";
             }
         }
